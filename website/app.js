@@ -57,24 +57,31 @@ const retrieveData = async (url) =>{
 
 /* Function to POST data */
 const postData = async (url, data)=>{
-    const response = await fetch(url, {
-      method: 'POST', 
-      credentials: 'same-origin',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
-    });
+  const response = await fetch(url, {
+    method: 'POST', 
+    credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+  });
 
-      try {
-        const newData = await response.json();
-        return newData;
-      }catch(error) {
-        console.log("error", error);
-      }
-  }
+    try {
+      const newData = await response.json();
+      return newData;
+    }catch(error) {
+      console.log("error", error);
+    }
+}
 
 /* Function to GET Project Data */
 const updateUI = async (url) =>{
-  const request = await fetch(url);
+  let request;
+  try{
+    request = await fetch(url);
+  }catch(error) {
+    console.log("error: Can't retrieve data from local server.\n", error);
+    alert("Local server is down.");
+  }
+  
   try {
     const storedData = await request.json();
     dateDisplay.innerHTML = `Date: ${storedData.date}.`;
