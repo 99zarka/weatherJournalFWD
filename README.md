@@ -10,6 +10,7 @@ A project related to the FWD web development scholarship by Udacity that require
 * [How to run after Installation?](#how-to-run-after-installation)
 * [Dependencies](#dependencies)
 * [API](#api)
+* [User Interface](#user-interface)
 * [How it works?](#how-it-works)
 
 ## Overview
@@ -36,6 +37,8 @@ OR
 
 You could also run the server separately (using `run server only.bat`) then open the webpage from `\website\index.html`.
 
+You have the option to open the webpage online from [here](https://99zarka.github.io/weatherJournalFWD/website/ "online web page"), but you will still have to run the server locally so that the app can work properly.
+
 ## Dependencies
 - [Express](https://expressjs.com/ "Express info"): A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 - [body-parser](http://expressjs.com/en/resources/middleware/body-parser.html "body-parser info"): Node.js body parsing middleware. Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
@@ -46,6 +49,11 @@ You could also run the server separately (using `run server only.bat`) then open
 [OpenWeatherMap](https://en.wikipedia.org/wiki/OpenWeatherMap "OpenWeatherMap info") is an online service that provides global weather data via API, including current weather data, forecasts, nowcasts and historical weather data for any geographical location.
 
 You can inspect all the data and different APIs provided by openweathermap from [here](https://en.wikipedia.org/wiki/OpenWeatherMap "OpenWeatherMap APIs")
+
+## User Interface
+The webpage is responsive and mobile friendly. You can try the UI online from [here](https://99zarka.github.io/weatherJournalFWD/website/ "online web page").
+
+P.S: If the server is not running locally, the web app will not work as expected and the user gets an error message.
 
 ## How it works?
 1. The weather data is imported from OpenWeatherMap API to the client-side.
